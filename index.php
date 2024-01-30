@@ -4,6 +4,13 @@ class movie
     public $name;
     public $year;
     public $type;
+
+    function __construct($_name, $_year, $_type)
+    {
+        $this->name = $_name;
+        $this->year = $_year;
+        $this->type = $_type;
+    }
 }
 
 $movie_1 = new movie();
