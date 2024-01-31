@@ -22,26 +22,31 @@ class movie
             return "Visibile da tutti";
         }
     }
+
+    function getGeneri()
+    {
+        return " e si tratta di un film di un film " . implode('/', $this->type);
+    }
 }
 
 
 
 
-$movie_1 = new movie("Guerre stellari (Star Wars: Episodio IV - Una nuova speranza)", "25 maggio 1977", "Fantascienza", 18);
+$movie_1 = new movie("Guerre stellari (Star Wars: Episodio IV - Una nuova speranza)", "25 maggio 1977", ["Fantascienza", "Fantapolitico"], 18);
 
 /* $movie_1->name = "Guerre stellari (Star Wars: Episodio IV - Una nuova speranza)";
 $movie_1->year = "25 maggio 1977";
 $movie_1->type = "Fantascienza"; */
 
 
-$movie_2 = new movie("L'Impero colpisce ancora (Star Wars: Episodio V - L'Impero colpisce ancora)", "21 maggio 1980", "Fantascienza", 18);
+$movie_2 = new movie("L'Impero colpisce ancora (Star Wars: Episodio V - L'Impero colpisce ancora)", "21 maggio 1980", ["Fantascienza", "Fantapolitico"], 18);
 
     /* $movie_2->name = "L'Impero colpisce ancora (Star Wars: Episodio V - L'Impero colpisce ancora)";
 $movie_2->year = "21 maggio 1980";
 $movie_2->type = "Fantascienza" */;
 
 
-$movie_3 = new movie("Il ritorno dello Jedi (Star Wars: Episodio VI - Il ritorno dello Jedi)", "25 maggio 1983", "Fantascienza", 17);
+$movie_3 = new movie("Il ritorno dello Jedi (Star Wars: Episodio VI - Il ritorno dello Jedi)", "25 maggio 1983", ["Fantascienza", "Fantapolitico"], 17);
 
 /* $movie_3->name = "Il ritorno dello Jedi (Star Wars: Episodio VI - Il ritorno dello Jedi)";
 $movie_3->year = "25 maggio 1983";
@@ -72,7 +77,7 @@ $movie_3->type = "Fantascienza"; */
                 <div class="card" style="width: 50rem;">
                     <img src="https://i5.walmartimages.com/asr/c218724c-fc11-4dfc-9652-80a6b56d4137.76408bb17269c9daf22ba2570cb7168d.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text"><?php echo $movie_1->name . " è uscito nelle sale il " . $movie_1->year . " e si tratta di un film di " . $movie_1->type . "," . $movie_1->getPegi() . "<br>"; ?></p>
+                        <p class="card-text"><?php echo $movie_1->name . " è uscito nelle sale il " . $movie_1->year  . $movie_1->getGeneri() . "," . $movie_1->getPegi() . "<br>"; ?></p>
                     </div>
                 </div>
             </div>
@@ -88,7 +93,7 @@ $movie_3->type = "Fantascienza"; */
                 <div class="card" style="width: 50rem;">
                     <img src="https://www.swx.it/wp/wp-content/uploads/2009/09/impero-colpisce-ancora-trascrizione-e1482511758869.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text"><?php echo $movie_2->name . " è uscito nelle sale il " . $movie_2->year . " e si tratta di un film di " . $movie_2->type . "," . $movie_2->getPegi() . "<br>"; ?></p>
+                        <p class="card-text"><?php echo $movie_2->name . " è uscito nelle sale il " . $movie_2->year . $movie_2->getGeneri() . "," . $movie_2->getPegi() . "<br>"; ?></p>
                     </div>
                 </div>
             </div>
@@ -104,7 +109,7 @@ $movie_3->type = "Fantascienza"; */
                 <div class="card" style="width: 50rem;">
                     <img src="https://www.swx.it/wp/wp-content/uploads/2009/09/ritorno-dello-jedi-trascrizione-e1482511542222.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text"><?php echo $movie_3->name . " è uscito nelle sale il " . $movie_3->year . " e si tratta di un film di " . $movie_3->type . "," . $movie_3->getPegi() . "<br>"; ?></p>
+                        <p class="card-text"><?php echo $movie_3->name . " è uscito nelle sale il " . $movie_3->year . $movie_3->getGeneri() . "," . $movie_3->getPegi() . "<br>"; ?></p>
                     </div>
                 </div>
             </div>
